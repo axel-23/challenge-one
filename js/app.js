@@ -142,12 +142,13 @@ function encryptText(textToEncrypt) {
     Función para para desencriptar el texto de entrada.
 
     Realizamos el mismo proceso de encriptar el texto, con la diferencia que invertimos el 'value' y 'key' en el método
-    .replaceAll() para desencriptar el texto.
+    .replaceAll() para desencriptar el texto. Se agrega .sort() para ordenar el array y solucinar
+    un problema la desencriptar la palabra 'jaimenters' => 'ja'. Cuando lo correcto es: 'jaimenters' => 'james'.
 
 */
 function decryptText(textToDecrypt) {
     let result = textToDecrypt;
-    for (const [key, value] of Object.entries(keys)) {
+    for (const [key, value] of Object.entries(keys).sort()) {
         result = result.replaceAll(value, key);
     }
     return result;
