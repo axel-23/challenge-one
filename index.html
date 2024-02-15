@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura Challenge - Encriptador / Desencriptador de texto</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/de69bf2152.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <header class="container-fluid p-5">
+      <div class="row">
+        <div class="col">
+          <img src="./img/alura.svg" alt="Alura Latam" />
+        </div>
+      </div>
+    </header>
+
+    <div class="container container-md">
+      <div class="row m-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-8 mb-3">
+          <div class="mb-3 p-1">
+            <textarea
+              class="form-control"
+              placeholder="Ingrese el texto aquí"
+              id="inputText"
+              rows="15"
+            ></textarea>
+          </div>
+          <div class="p-2">
+            <div class="row mt-3">
+              <div class="col col-sm-2"></div>
+              <div class="col-8 col-sm-8 mx-auto">
+                <div class="hint"
+                  ><i class="fa-solid fa-circle-exclamation"></i>
+                  <p id="error" class="d-inline">
+                    Solo letras minúsculas y sin acentos.
+                  </p></div
+                >
+                <div class="buttons">
+                  <button
+                    type="button"
+                    id="encryptText"
+                    class="btn btn-lg p-2 w-md-100"
+                    disabled
+                  >
+                    Encriptar
+                  </button>
+                  <button
+                    type="button"
+                    id="decryptText"
+                    class="btn btn-lg p-2 w-md-100"
+                    disabled
+                  >
+                    Desencriptar
+                  </button>
+                </div>
+              </div>
+              <div class="col col-sm-2"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col col-12 col-sm-12 col-md-12 col-lg-4 sombra"
+        >
+          <div id="hidden">
+            <div
+              class="no-message-img m-1 mw-100 mx-auto d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block"
+            ></div>
+            <div class="p-5 p-sm-3 p-md-4">
+              <p class="no-message">Ningún mensaje fue encontrado</p>
+
+              <p class="message">
+                Ingresa el texto que desees encriptar o desencriptar.
+              </p>
+            </div>
+          </div>
+          <div id="show" class="px-3 pt-3 d-none">
+            <textarea class="form-control lh-base pb-3" id="outputText" readonly rows="15"></textarea>
+            <div class="d-grid gap-2 col-md-6 w-100 mt-5 mb-3">
+              <button
+                type="button"
+                id="copyOutputText"
+                class="btn btn-lg p-2"
+              >
+                Copiar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="container-fluid d-flex flex-wrap justify-content-between align-items-center p-3 border-top"
+    >
+      <div class="col-md-4 d-flex align-items-center">
+        <span>Elaborado por Axel Hernández</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a target="_blank" href="https://github.com/axel-23"
+            ><i class="fa-brands fa-github fa-2xl"></i
+          ></a>
+        </li>
+        <li class="ms-3">
+          <a href="#"
+            ><i class="fa-brands fa-discord fa-2xl"></i
+          ></a>
+        </li>
+        <li class="ms-3">
+          <a target="_blank" href="www.linkedin.com/in/axel-hernández-s"
+            ><i class="fa-brands fa-linkedin fa-2xl"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
