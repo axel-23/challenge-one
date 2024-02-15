@@ -2,11 +2,6 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]'),
     tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-// Deshabilitar el menú al dar clic derecho.
-document.oncontextmenu = (e) => {
-    return false;
-}
-
 // Deshabilitar la tecla F12 y la combinación Ctrl + U.
 document.onkeydown = (e) => {
     if (e.code === 'F12' || (e.ctrlKey && e.code === 'KeyU')) {
